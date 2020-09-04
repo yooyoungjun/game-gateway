@@ -1,0 +1,82 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: mission
+          uri: http://localhost:8081
+          predicates:
+            - Path=/missions/** 
+        - id: reward
+          uri: http://localhost:8082
+          predicates:
+            - Path=/rewards/** 
+        - id: wallet
+          uri: http://localhost:8083
+          predicates:
+            - Path=/wallets/** 
+        - id: gift
+          uri: http://localhost:8084
+          predicates:
+            - Path=/gifts/** 
+        - id: mypage
+          uri: http://localhost:8085
+          predicates:
+            - Path= /mypages/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: mission
+          uri: http://mission:8080
+          predicates:
+            - Path=/missions/** 
+        - id: reward
+          uri: http://reward:8080
+          predicates:
+            - Path=/rewards/** 
+        - id: wallet
+          uri: http://wallet:8080
+          predicates:
+            - Path=/wallets/** 
+        - id: gift
+          uri: http://gift:8080
+          predicates:
+            - Path=/gifts/** 
+        - id: mypage
+          uri: http://mypage:8080
+          predicates:
+            - Path= /mypages/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080
