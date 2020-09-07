@@ -50,23 +50,23 @@ spring:
         - id: mission
           uri: http://mission:8080
           predicates:
-            - Path=/missions/** 
+            - Path=/game-missions/** 
         - id: reward
           uri: http://reward:8080
           predicates:
-            - Path=/rewards/** 
+            - Path=/game-rewards/** 
         - id: wallet
           uri: http://wallet:8080
           predicates:
-            - Path=/wallets/** 
+            - Path=/game-wallets/** 
         - id: gift
           uri: http://gift:8080
           predicates:
-            - Path=/gifts/** 
+            - Path=/game-gifts/** 
         - id: mypage
           uri: http://mypage:8080
           predicates:
-            - Path= /mypages/**
+            - Path= /game-mypages/**
       globalcors:
         corsConfigurations:
           '[/**]':
