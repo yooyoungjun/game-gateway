@@ -47,24 +47,24 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: mission
-          uri: http://mission:8080
+        - id: game-mission
+          uri: http://game-mission:8080
           predicates:
             - Path=/game-missions/** 
-        - id: reward
-          uri: http://reward:8080
+        - id: game-reward
+          uri: http://game-reward:8080
           predicates:
             - Path=/game-rewards/** 
-        - id: wallet
-          uri: http://wallet:8080
+        - id: game-wallet
+          uri: http://game-wallet:8080
           predicates:
             - Path=/game-wallets/** 
-        - id: gift
-          uri: http://gift:8080
+        - id: game-gift
+          uri: http://game-gift:8080
           predicates:
             - Path=/game-gifts/** 
-        - id: mypage
-          uri: http://mypage:8080
+        - id: game-mypage
+          uri: http://game-mypage:8080
           predicates:
             - Path= /game-mypages/**
       globalcors:
