@@ -29,9 +29,9 @@ spring:
           predicates:
             - Path= /mypages/
         - id: payment
-            uri: http://localhost:8086
-            predicates:
-              - Path= /payments/**
+          uri: http://localhost:8086
+          predicates:
+            - Path= /payments/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -72,9 +72,9 @@ spring:
           predicates:
             - Path= /mypages/**
         - id: payment
-            uri: http://payment:8080
-            predicates:
-              - Path= /payments/**
+          uri: http://payment:8080
+          predicates:
+            - Path= /payments/**
       globalcors:
         corsConfigurations:
           '[/**]':
