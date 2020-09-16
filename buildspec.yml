@@ -3,7 +3,7 @@ version: 0.2
 env:
   variables:
     _PROJECT_NAME: "game-gateway"
-    _REPOSITORY_NAME: "admin09-game-mission"
+    _REPOSITORY_NAME: "admin09-game-gateway"
 
 phases:
   install:
